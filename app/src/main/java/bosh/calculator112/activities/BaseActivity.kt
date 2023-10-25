@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding
 import bosh.calculator112.utilities.BuildConfigBuffer
 
 abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
-    abstract val bindingInflater: (LayoutInflater) -> T
+    protected abstract val bindingInflater: (LayoutInflater) -> T
     protected val vb by lazy { bindingInflater.invoke(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
