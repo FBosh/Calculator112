@@ -2,15 +2,13 @@ package bosh.calculator112.activities
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import androidx.annotation.CallSuper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import bosh.calculator112.utilities.BuildConfigBuffer
 
 abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
-    protected abstract val bindingInflater: (LayoutInflater) -> T
-    protected val vb by lazy { bindingInflater.invoke(layoutInflater) }
+    protected abstract val vb: T
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

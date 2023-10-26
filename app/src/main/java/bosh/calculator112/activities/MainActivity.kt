@@ -1,14 +1,13 @@
 package bosh.calculator112.activities
 
 import android.text.method.ScrollingMovementMethod
-import android.view.LayoutInflater
 import android.widget.Button
 import bosh.calculator112.R
 import bosh.calculator112.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    override val bindingInflater: (LayoutInflater) -> ActivityMainBinding = ActivityMainBinding::inflate
+    override val vb by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun initUI() {
         super.initUI()
