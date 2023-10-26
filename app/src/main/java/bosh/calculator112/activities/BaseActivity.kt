@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import bosh.calculator112.utilities.BuildConfigBuffer
 
-abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
-    protected abstract val vb: T
+abstract class BaseActivity : AppCompatActivity() {
+    protected abstract val vb: ViewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

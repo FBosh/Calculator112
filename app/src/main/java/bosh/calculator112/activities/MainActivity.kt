@@ -6,7 +6,7 @@ import bosh.calculator112.R
 import bosh.calculator112.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseActivity() {
     override val vb by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun initUI() {
